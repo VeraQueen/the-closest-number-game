@@ -65,6 +65,9 @@ button {
 .generated-number {
   width: 40rem;
   height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .player-computer {
