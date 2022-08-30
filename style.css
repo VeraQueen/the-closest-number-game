@@ -26,3 +26,9 @@ button {
   color: #fff;
   padding: 3rem 0;
 }
+
+.player-a,
+.player-b,
+.player-computer {
+  background-color: #051036;
+}
