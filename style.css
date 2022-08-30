@@ -15,20 +15,77 @@ button {
   font-family: "Irish Grover", sans-serif;
 }
 
-.game-title {
+.game-title,
+.game-area {
   width: 100vw;
   text-align: center;
   background-color: #051036;
 }
 
 .title {
-  font-size: 12.8rem;
+  font-size: 9.6rem;
   color: #fff;
   padding: 3rem 0;
 }
 
-.player-a,
-.player-b,
+.game-area {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-height: 100vh;
+}
+
+.round-point {
+  font-size: 9.6rem;
+  color: #00ffad;
+}
+
+.your-number {
+  color: #6c9a8b;
+  font-size: 6.4rem;
+}
+
+.your-number::first-letter {
+  text-transform: uppercase;
+}
+
+.player-guess,
+.generated-number {
+  background-color: #ddb2ab;
+  opacity: 85%;
+  border-radius: 50px;
+  width: 33rem;
+  height: 22rem;
+  font-size: 12.8rem;
+  font-family: inherit;
+  text-align: center;
+  color: #381c18;
+}
+
+.generated-number {
+  width: 44rem;
+  height: 33rem;
+}
+
+.current-score {
+  color: #008c5f;
+  font-size: 4rem;
+}
+
 .player-computer {
-  background-color: #051036;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-round,
+.reset {
+  background-color: #381c18;
+  color: white;
+  border-radius: 50px;
+  width: 32rem;
+  height: 9rem;
+  border: none;
+  font-size: 5rem;
 }
