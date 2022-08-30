@@ -23,7 +23,7 @@ button {
 }
 
 .title {
-  font-size: 9.6rem;
+  font-size: 12.8rem;
   color: #fff;
   padding: 3rem 0;
 }
@@ -63,13 +63,8 @@ button {
 }
 
 .generated-number {
-  width: 44rem;
-  height: 33rem;
-}
-
-.current-score {
-  color: #008c5f;
-  font-size: 4rem;
+  width: 40rem;
+  height: 30rem;
 }
 
 .player-computer {
@@ -79,13 +74,37 @@ button {
   align-items: center;
 }
 
-.new-round,
-.reset {
+.player-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.current-score {
+  color: #008c5f;
+  font-size: 4rem;
+  align-self: flex-start;
+}
+
+.btn {
   background-color: #381c18;
   color: white;
   border-radius: 50px;
-  width: 32rem;
+  width: 28rem;
   height: 9rem;
   border: none;
-  font-size: 5rem;
+  font-size: 4rem;
+}
+
+.btn:last-child {
+  margin-bottom: 2rem;
+}
+.player-b,
+.player-a,
+.player-computer {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
 }
