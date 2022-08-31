@@ -1,10 +1,65 @@
+/*
+
+---- 01 TYPOGRAPHY SYSTEM
+
+- FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- FONT WEIGHTS
+Default: 300
+Medium: 400
+Semi-bold: 500 
+Bold: 600
+
+- LINE HEIGHTS
+Default: 1
+Small: 
+Medium: 
+Paragraph default: 
+
+- LETTER SPACING
+large: 1rem
+small: 2px
+xsmall: -2px
+
+
+---- 02 COLORS
+
+TEXT COLORS: #767676 (lightest allowed on #fff)
+#8e8c8c (lightest allowed on #04282f)
+
+MAIN COLOR: #04282f
+
+TINT: 
+
+SHADES:
+
+ACCENTS: #d4af37, #aa8c2c
+
+GREY COLORS: #ccc, #333
+
+---- 03 SHADOWS
+
+---- 04 BORDER RADIUS
+
+---- 05 OUTLINE
+outline: 2px solid #d4af37;
+outline-offset: 4px;
+
+---- 06 WHITESPACE
+
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-*:focus {
+*:focus,
+.btn:focus {
   outline: none;
   border: #00bc5f solid 8px;
 }
@@ -15,34 +70,58 @@ button {
   font-family: "Irish Grover", sans-serif;
 }
 
+.game {
+  background-color: #381c18;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container {
+  width: 70vw;
+  height: 80vh;
+}
+
 .game-title,
 .game-area {
-  width: 100vw;
+  width: 100%;
   text-align: center;
   background-color: #051036;
+  border-radius: 50px;
+}
+
+.game-title {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.game-area {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .title {
-  font-size: 12.8rem;
+  font-size: 8.6rem;
   color: #fff;
-  padding: 3rem 0;
+  padding: 5rem 0;
 }
 
 .game-area {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  max-height: 100vh;
 }
 
 .round-point {
-  font-size: 9.6rem;
+  font-size: 6.2rem;
   color: #00ffad;
 }
 
 .your-number {
   color: #6c9a8b;
-  font-size: 6.4rem;
+  font-size: 3.6rem;
 }
 
 .your-number::first-letter {
@@ -54,20 +133,21 @@ button {
   background-color: #ddb2ab;
   opacity: 85%;
   border-radius: 50px;
-  width: 33rem;
-  height: 22rem;
-  font-size: 12.8rem;
+  width: 20rem;
+  height: 15rem;
+  font-size: 8.2rem;
   font-family: inherit;
   text-align: center;
   color: #381c18;
 }
 
 .generated-number {
-  width: 40rem;
-  height: 30rem;
+  width: 30rem;
+  height: 20rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 9.6rem;
 }
 
 .player-computer {
@@ -82,23 +162,23 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 1.5rem;
 }
 
 .current-score {
   color: #008c5f;
-  font-size: 4rem;
-  align-self: flex-start;
+  font-size: 3rem;
 }
 
 .btn {
   background-color: #381c18;
   color: white;
   border-radius: 50px;
-  width: 28rem;
-  height: 9rem;
+  width: 20rem;
+  height: 6rem;
   border: none;
-  font-size: 4rem;
+  font-size: 3rem;
+  cursor: pointer;
 }
 
 .btn:last-child {
@@ -109,5 +189,6 @@ button {
 .player-computer {
   display: flex;
   flex-direction: column;
-  gap: 8rem;
+  gap: 5rem;
+  padding-bottom: 7rem;
 }
