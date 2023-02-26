@@ -88,13 +88,14 @@ button {
 .game-area {
   width: 100%;
   text-align: center;
-  background-color: #051036;
+  background-image: linear-gradient(180deg, #381c18, #2d1613, #160b0a);
   border-radius: 50px;
 }
 
 .game-title {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  background-image: linear-gradient(180deg, #160b0a, #2d1613, #381c18);
 }
 
 .game-area {
@@ -104,7 +105,7 @@ button {
 
 .title {
   font-size: 8.6rem;
-  color: #fff;
+  color: #fff4e6;
   padding: 5rem 0;
 }
 
@@ -171,8 +172,8 @@ button {
 }
 
 .btn {
-  background-color: #381c18;
-  color: white;
+  background-image: linear-gradient(180deg, #381c18, #2d1613, #160b0a);
+  color: #fff4e6;
   border-radius: 50px;
   width: 20rem;
   height: 6rem;
