@@ -61,7 +61,7 @@ outline-offset: 4px;
 *:focus,
 .btn:focus {
   outline: none;
-  border: #00bc5f solid 8px;
+  border: #00a956 solid 8px;
 }
 
 body,
@@ -117,7 +117,7 @@ button {
 
 .round-point {
   font-size: 6.2rem;
-  color: #00ffad;
+  color: #00a956;
 }
 
 .your-number {
@@ -167,7 +167,7 @@ button {
 }
 
 .current-score {
-  color: #008c5f;
+  color: #00763c;
   font-size: 3rem;
 }
 
