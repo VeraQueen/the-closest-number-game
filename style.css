@@ -76,23 +76,16 @@ button {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-.game-container {
-  width: 70vw;
-  height: 80vh;
-}
-
-.game-title,
+.title-container,
 .game-area {
-  width: 100%;
   text-align: center;
   background-image: linear-gradient(180deg, #381c18, #2d1613, #160b0a);
   border-radius: 50px;
 }
 
-.game-title {
+.title-container {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   background-image: linear-gradient(180deg, #160b0a, #2d1613, #381c18);
@@ -107,6 +100,7 @@ button {
   font-size: 8.6rem;
   color: #fff4e6;
   padding: 5rem 0;
+  margin: 8rem 8rem 0 8rem;
 }
 
 .game-area {
@@ -123,6 +117,7 @@ button {
 .your-number {
   color: #6c9a8b;
   font-size: 3.6rem;
+  margin: 0 8rem 0 8rem;
 }
 
 .your-number::first-letter {
@@ -183,8 +178,9 @@ button {
 }
 
 .btn:last-child {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
+
 .player-b,
 .player-a,
 .player-computer {
