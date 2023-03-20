@@ -59,7 +59,8 @@ outline-offset: 4px;
 }
 
 *:focus,
-.btn:focus {
+.btn:focus,
+.btn-numbers button:focus {
   outline: none;
   border: #00a956 solid 8px;
 }
@@ -71,7 +72,6 @@ button {
 }
 
 .game {
-  background-image: linear-gradient(180deg, #381c18, #2d1613, #160b0a);
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -81,7 +81,6 @@ button {
 .title-container,
 .game-area {
   text-align: center;
-  background-image: linear-gradient(180deg, #381c18, #2d1613, #160b0a);
   border-radius: 50px;
 }
 
@@ -108,6 +107,11 @@ button {
   justify-content: space-around;
   align-items: center;
 }
+.game,
+.game-area,
+.btn {
+  background-image: linear-gradient(180deg, #381c18, #2d1613, #160b0a);
+}
 
 .round-point {
   font-size: 6.2rem;
@@ -115,7 +119,8 @@ button {
 }
 
 .your-number {
-  color: #6c9a8b;
+  color: #fff4e6;
+  opacity: 80%;
   font-size: 3.6rem;
   margin: 0 8rem 0 8rem;
 }
@@ -127,7 +132,6 @@ button {
 .player-guess,
 .generated-number {
   background-color: #ddb2ab;
-  opacity: 85%;
   border-radius: 50px;
   width: 20rem;
   height: 15rem;
@@ -135,6 +139,22 @@ button {
   font-family: inherit;
   text-align: center;
   color: #381c18;
+  z-index: 999;
+  /*figure out this shitty border around the input box*/
+  box-shadow: none;
+}
+/* so you can see the difference it will make when implementing javascript: this one is a regular div, and .player-guess is an input field*/
+.player-guess-1 {
+  background-color: #ddb2ab;
+  border-radius: 50px;
+  width: 20rem;
+  height: 15rem;
+  font-size: 8.2rem;
+  text-align: center;
+  color: #381c18;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .generated-number {
@@ -146,7 +166,8 @@ button {
   font-size: 9.6rem;
 }
 
-.player-computer {
+.player-computer,
+.player-area {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -154,10 +175,6 @@ button {
 }
 
 .player-area {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 1.5rem;
 }
 
@@ -167,7 +184,6 @@ button {
 }
 
 .btn {
-  background-image: linear-gradient(180deg, #381c18, #2d1613, #160b0a);
   color: #fff4e6;
   border-radius: 50px;
   width: 20rem;
@@ -178,7 +194,8 @@ button {
 }
 
 .btn:last-child {
-  margin-bottom: 1rem;
+  display: block;
+  margin: 1rem auto;
 }
 
 .player-b,
@@ -188,4 +205,54 @@ button {
   flex-direction: column;
   gap: 5rem;
   padding-bottom: 7rem;
+}
+
+.player-a,
+.player-b {
+  position: relative;
+}
+
+.player-a::before {
+  content: "a";
+  position: absolute;
+  font-size: 40rem;
+  height: fit-content;
+  width: fit-content;
+  color: #fff4e6;
+  opacity: 10%;
+  left: 0;
+  top: 0;
+  transform: translate(-60%);
+  z-index: 0;
+}
+
+.player-b::before {
+  content: "b";
+  position: absolute;
+  font-size: 40rem;
+  height: fit-content;
+  width: fit-content;
+  color: #fff4e6;
+  opacity: 10%;
+  right: 0;
+  top: 0;
+  transform: translate(60%);
+  z-index: 0;
+}
+
+.btn-numbers button {
+  display: block;
+  background-color: #381c18;
+  color: #fff4e6;
+  border-radius: 50px;
+  width: 6rem;
+  height: 6rem;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.btn-numbers {
+  display: flex;
+  gap: 3px;
 }
