@@ -58,11 +58,11 @@ outline-offset: 4px;
   box-sizing: border-box;
 }
 
-*:focus,
-.btn:focus,
-.btn-numbers button:focus {
+*:focus-visible,
+.btn:focus-visible,
+.btn-numbers button:focus-visible {
   outline: none;
-  border: #00a956 solid 8px;
+  border: #00a956 solid 3px;
 }
 
 body,
@@ -72,7 +72,6 @@ button {
 }
 
 .game {
-  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -93,6 +92,9 @@ button {
 .game-area {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .title {
@@ -102,11 +104,6 @@ button {
   margin: 8rem 8rem 0 8rem;
 }
 
-.game-area {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
 .game,
 .game-area,
 .btn {
@@ -114,8 +111,9 @@ button {
 }
 
 .round-point {
-  font-size: 6.2rem;
-  color: #00a956;
+  font-size: 6.5rem;
+  color: #008745;
+  margin-bottom: 4rem;
 }
 
 .your-number {
@@ -135,7 +133,7 @@ button {
   border-radius: 50px;
   width: 20rem;
   height: 15rem;
-  font-size: 8.2rem;
+  font-size: 7.4rem;
   font-family: inherit;
   text-align: center;
   color: #381c18;
@@ -149,7 +147,7 @@ button {
   border-radius: 50px;
   width: 20rem;
   height: 15rem;
-  font-size: 8.2rem;
+  font-size: 7.4rem;
   text-align: center;
   color: #381c18;
   display: flex;
@@ -172,14 +170,11 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.player-area {
   gap: 1.5rem;
 }
 
 .current-score {
-  color: #00763c;
+  color: #008745;
   font-size: 3rem;
 }
 
@@ -201,9 +196,6 @@ button {
 .player-b,
 .player-a,
 .player-computer {
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
   padding-bottom: 7rem;
 }
 
@@ -241,7 +233,6 @@ button {
 }
 
 .btn-numbers button {
-  display: block;
   background-color: #381c18;
   color: #fff4e6;
   border-radius: 50px;
@@ -252,7 +243,12 @@ button {
   cursor: pointer;
 }
 
-.btn-numbers {
-  display: flex;
-  gap: 3px;
+.btn:hover,
+.btn-numbers button:hover {
+  background-image: none;
+  background-color: #00763c;
+}
+.btn:active,
+.btn-numbers button:active {
+  background-color: #00552b;
 }
