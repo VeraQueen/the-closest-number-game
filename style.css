@@ -62,7 +62,7 @@ outline-offset: 4px;
 .btn:focus-visible,
 .btn-numbers button:focus-visible {
   outline: none;
-  border: #00a956 solid 3px;
+  border: #a167a5 solid 3px;
 }
 
 body,
@@ -86,7 +86,7 @@ button {
 .title-container {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  background-image: linear-gradient(180deg, #160b0a, #2d1613, #381c18);
+  background-image: linear-gradient(180deg, #160b0a, #0d2336, #0e273c);
 }
 
 .game-area {
@@ -98,7 +98,7 @@ button {
 
 .title {
   font-size: 7.4rem;
-  color: #fff4e6;
+  color: #d6d1cd;
   padding: 5rem 0;
   margin: 8rem 8rem 0 8rem;
 }
@@ -106,17 +106,17 @@ button {
 .game,
 .game-area,
 .btn {
-  background-image: linear-gradient(180deg, #381c18, #2d1613, #160b0a);
+  background-image: linear-gradient(180deg, #0e273c, #0d2336, #160b0a);
 }
 
 .round-point {
   font-size: 6.5rem;
-  color: #008745;
+  color: #a167a5;
   margin-bottom: 4rem;
 }
 
 .your-number {
-  color: #fff4e6;
+  color: #d6d1cd;
   opacity: 80%;
   font-size: 3.6rem;
   margin: 0 8rem 0 8rem;
@@ -128,26 +128,28 @@ button {
 
 .player-guess,
 .generated-number {
-  background-color: #ddb2ab;
+  background-color: #d3bccc;
+  opacity: 90%;
   border-radius: 50px;
   width: 20rem;
   height: 15rem;
   font-size: 7.4rem;
   font-family: inherit;
   text-align: center;
-  color: #381c18;
+  color: #0e273c;
   /*figure out this shitty border around the input box*/
   box-shadow: none;
 }
 /* so you can see the difference it will make when implementing javascript: this one is a regular div, and .player-guess is an input field*/
 .player-guess-1 {
-  background-color: #ddb2ab;
+  background-color: #d3bccc;
+  opacity: 90%;
   border-radius: 50px;
   width: 20rem;
   height: 15rem;
   font-size: 7.4rem;
   text-align: center;
-  color: #381c18;
+  color: #0e273c;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,12 +174,12 @@ button {
 }
 
 .current-score {
-  color: #008745;
+  color: #a167a5;
   font-size: 3rem;
 }
 
 .btn {
-  color: #fff4e6;
+  color: #d6d1cd;
   border-radius: 50px;
   width: 20rem;
   height: 6rem;
@@ -208,8 +210,8 @@ button {
   font-size: 35rem;
   height: fit-content;
   width: fit-content;
-  color: #fff4e6;
-  opacity: 10%;
+  color: #d6d1cd;
+  opacity: 20%;
   left: 0;
   top: 0;
   transform: translate(-65%);
@@ -221,16 +223,16 @@ button {
   font-size: 35rem;
   height: fit-content;
   width: fit-content;
-  color: #fff4e6;
-  opacity: 10%;
+  color: #d6d1cd;
+  opacity: 20%;
   right: 0;
   top: 0;
   transform: translate(65%);
 }
 
 .btn-numbers button {
-  background-color: #381c18;
-  color: #fff4e6;
+  background-color: #0e273c;
+  color: #d6d1cd;
   border-radius: 50px;
   width: 6rem;
   height: 6rem;
@@ -242,9 +244,9 @@ button {
 .btn:hover,
 .btn-numbers button:hover {
   background-image: none;
-  background-color: #00763c;
+  background-color: #a167a5;
 }
 .btn:active,
 .btn-numbers button:active {
-  background-color: #00552b;
+  background-color: #68436b;
 }
