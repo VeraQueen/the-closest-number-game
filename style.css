@@ -137,8 +137,6 @@ button {
   font-family: inherit;
   text-align: center;
   color: #0e273c;
-  /*figure out this shitty border around the input box*/
-  box-shadow: none;
 }
 /* so you can see the difference it will make when implementing javascript: this one is a regular div, and .player-guess is an input field*/
 .player-guess-1 {
@@ -225,6 +223,8 @@ button {
   width: fit-content;
   color: #d6d1cd;
   opacity: 20%;
+  /* color: #782b80;
+  opacity: 100%; */
   right: 0;
   top: 0;
   transform: translate(65%);
@@ -244,9 +244,13 @@ button {
 .btn:hover,
 .btn-numbers button:hover {
   background-image: none;
-  background-color: #a167a5;
+  background-color: #511d56;
 }
 .btn:active,
 .btn-numbers button:active {
-  background-color: #68436b;
+  background-color: #36133a;
 }
+
+/* .winner {
+  color: #5c7cfa;
+} */
