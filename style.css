@@ -2,49 +2,49 @@
 
 ---- 01 TYPOGRAPHY SYSTEM
 
+- FONT FAMILY 
+"Irish Grover", sans-serif
+
 - FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 
 - FONT WEIGHTS
-Default: 300
 Medium: 400
-Semi-bold: 500 
-Bold: 600
+Bold: -
 
 - LINE HEIGHTS
 Default: 1
-Small: 
-Medium: 
-Paragraph default: 
+Small: -
+Medium: -
+Paragraph default: -
 
 - LETTER SPACING
-large: 1rem
-small: 2px
-xsmall: -2px
+large: -
+Small: -
+Xsmall: -
 
 
 ---- 02 COLORS
 
-TEXT COLORS: #767676 (lightest allowed on #fff)
-#8e8c8c (lightest allowed on #04282f)
+TEXT COLORS: #d6d1cd, #a167a5
 
-MAIN COLOR: #04282f
+MAIN COLOR: #0d2336, #d3bccc
 
-TINT: 
+TINT: #0e273c, #5c7cfa
 
 SHADES:
 
-ACCENTS: #d4af37, #aa8c2c
+ACCENTS: #a167a5, #511d56, #36133a
 
-GREY COLORS: #ccc, #333
+GREY COLORS: -
 
 ---- 03 SHADOWS
 
 ---- 04 BORDER RADIUS
+Default: 50px;
 
 ---- 05 OUTLINE
-outline: 2px solid #d4af37;
-outline-offset: 4px;
+Outline: -
 
 ---- 06 WHITESPACE
 
@@ -65,10 +65,15 @@ outline-offset: 4px;
   border: #a167a5 solid 3px;
 }
 
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
 body,
 button {
-  font-size: 62.5%;
   font-family: "Irish Grover", sans-serif;
+  line-height: 1;
 }
 
 .game {
