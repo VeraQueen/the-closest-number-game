@@ -28,13 +28,13 @@ Xsmall: -
 
 TEXT COLORS: #d6d1cd, #a167a5
 
-MAIN COLOR: #0d2336, #d3bccc
+MAIN COLOR: #0d2336
 
-TINT: #0e273c, #5c7cfa
+TINT: #0e273c, #d3bccc
 
-SHADES:
+SHADES:#36133a, #511d56
 
-ACCENTS: #a167a5, #511d56, #36133a
+ACCENTS: #a167a5, #ea630f, #5c7cfa
 
 GREY COLORS: -
 
@@ -67,7 +67,7 @@ Outline: -
 
 html {
   font-size: 62.5%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 body,
@@ -79,45 +79,47 @@ button {
 .game {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    180deg,
+    #160b0a,
+    #0d2336,
+    #0e273c,
+    #0d2336,
+    #160b0a
+  );
 }
 
-.title-container,
 .game-area {
-  text-align: center;
   border-radius: 50px;
-}
-
-.title-container {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  background-image: linear-gradient(180deg, #160b0a, #0d2336, #0e273c);
-}
-
-.game-area {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 .title {
-  font-size: 7.4rem;
+  font-size: 9.8rem;
   color: #d6d1cd;
   padding: 5rem 0;
-  margin: 8rem 8rem 0 8rem;
-}
-
-.game,
-.game-area,
-.btn {
-  background-image: linear-gradient(180deg, #0e273c, #0d2336, #160b0a);
+  border-radius: 50px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .round-point {
-  font-size: 6.5rem;
+  font-size: 6.2rem;
   color: #a167a5;
-  margin-bottom: 4rem;
+  margin: 3rem auto;
+}
+
+.player--active--0,
+.player--active--1 {
+  color: #ea630f;
+  font-size: 5.2rem;
 }
 
 .your-number {
@@ -130,7 +132,6 @@ button {
 .your-number::first-letter {
   text-transform: uppercase;
 }
-
 .player-guess,
 .generated-number {
   background-color: #d3bccc;
@@ -141,18 +142,7 @@ button {
   font-size: 7.4rem;
   font-family: inherit;
   text-align: center;
-  color: #0e273c;
-}
-/* so you can see the difference it will make when implementing javascript: this one is a regular div, and .player-guess is an input field*/
-.player-guess-1 {
-  background-color: #d3bccc;
-  opacity: 90%;
-  border-radius: 50px;
-  width: 20rem;
-  height: 15rem;
-  font-size: 7.4rem;
-  text-align: center;
-  color: #0e273c;
+  color: #0a1a27;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -161,9 +151,6 @@ button {
 .generated-number {
   width: 30rem;
   height: 20rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 9.6rem;
 }
 
@@ -173,7 +160,12 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
+}
+
+.player-area {
+  padding-top: 7rem;
+  padding-bottom: 3rem;
 }
 
 .current-score {
@@ -185,29 +177,27 @@ button {
   color: #d6d1cd;
   border-radius: 50px;
   width: 20rem;
-  height: 6rem;
+  height: 5rem;
   border: none;
   font-size: 3rem;
   cursor: pointer;
-}
-
-.btn:last-child {
   display: block;
-  margin: 1rem auto;
 }
 
-.player-b,
-.player-a,
+.btn,
+.btn-numbers button {
+  background-color: #0a1a27;
+}
+
 .player-computer {
-  padding-bottom: 7rem;
+  padding-bottom: 4rem;
 }
 
-.player-a,
-.player-b {
+.player {
   position: relative;
 }
 
-.player-a::before {
+.player--0::before {
   content: "A";
   position: absolute;
   font-size: 35rem;
@@ -216,11 +206,11 @@ button {
   color: #d6d1cd;
   opacity: 20%;
   left: 0;
-  top: 0;
+  top: 15%;
   transform: translate(-65%);
 }
 
-.player-b::before {
+.player--1::before {
   content: "B";
   position: absolute;
   font-size: 35rem;
@@ -228,15 +218,12 @@ button {
   width: fit-content;
   color: #d6d1cd;
   opacity: 20%;
-  /* color: #782b80;
-  opacity: 100%; */
   right: 0;
-  top: 0;
+  top: 15%;
   transform: translate(65%);
 }
 
 .btn-numbers button {
-  background-color: #0e273c;
   color: #d6d1cd;
   border-radius: 50px;
   width: 6rem;
@@ -256,6 +243,6 @@ button {
   background-color: #36133a;
 }
 
-/* .winner {
+.winner {
   color: #5c7cfa;
-} */
+}

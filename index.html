@@ -4,7 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Play this fun game with your friends and see who is better at guessing. Your job: be as close to the computer generated number as you can, win points and the game."
+    />
     <title>The Closest Number</title>
+    <link rel="icon" href="img/favicon/favicon.png" />
+    <link rel="apple-touch-icon" href="img/favicon/favicon-180-app.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,68 +21,55 @@
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- <section class="game-instructions invisible"></section> -->
-    <section class="game">
-      <div>
-        <div class="title-container">
-          <p class="title">The closest number</p>
-        </div>
-        <main class="game-area">
-          <div class="player-a">
-            <div class="round-point winner">+1 pt</div>
-            <section class="player-area">
-              <div class="your-number">your number:</div>
-              <div class="player-guess-1">1</div>
-              <div class="current-score">Score: 0/5</div>
-            </section>
+    <!-- <section class="game-instructions hidden"></section> -->
+    <main class="game">
+      <div class="game-area">
+        <section class="player player--0">
+          <p class="player--active--0 round-point winner">Your turn!</p>
+          <div class="player-area">
+            <p class="your-number">your number:</p>
+            <p class="player-guess" id="guess--0">1</p>
+            <p class="current-score">Score: <span id="point--0">0</span>/5</p>
           </div>
-          <div class="player-computer">
-            <div class="generated-number">
-              <p>?</p>
-            </div>
-            <section>
-              <button class="btn">reset</button>
-              <button class="btn">check</button>
-            </section>
+        </section>
+        <section class="player-computer">
+          <p class="generated-number">?</p>
+          <button class="btn btn--new-round">new round</button>
+          <button class="btn btn--reset">reset</button>
+          <button class="btn btn--check">check</button>
+        </section>
+        <section class="player player--1">
+          <p class="player--active--1 round-point winner">Your turn!</p>
+          <div class="player-area">
+            <p class="your-number">your number:</p>
+            <p class="player-guess" id="guess--1">17</p>
+            <p class="current-score">Score: <span id="point--1">0</span>/5</p>
           </div>
-          <div class="player-b">
-            <div class="round-point winner">+1 pt</div>
-            <section class="player-area">
-              <div class="your-number">your number:</div>
-              <input
-                class="player-guess"
-                type="number"
-                min="1"
-                max="20"
-                required
-              />
-              <div class="current-score">Score: 0/5</div>
-            </section>
-          </div>
-        </main>
-        <section class="btn-numbers">
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
-          <button>7</button>
-          <button>8</button>
-          <button>9</button>
-          <button>10</button>
-          <button>11</button>
-          <button>12</button>
-          <button>13</button>
-          <button>14</button>
-          <button>15</button>
-          <button>16</button>
-          <button>17</button>
-          <button>18</button>
-          <button>19</button>
-          <button>20</button>
         </section>
       </div>
-    </section>
+      <section class="btn-numbers">
+        <button id="num--1">1</button>
+        <button id="num--2">2</button>
+        <button id="num--3">3</button>
+        <button id="num--4">4</button>
+        <button id="num--5">5</button>
+        <button id="num--6">6</button>
+        <button id="num--7">7</button>
+        <button id="num--8">8</button>
+        <button id="num--9">9</button>
+        <button id="num--10">10</button>
+        <button id="num--11">11</button>
+        <button id="num--12">12</button>
+        <button id="num--13">13</button>
+        <button id="num--14">14</button>
+        <button id="num--15">15</button>
+        <button id="num--16">16</button>
+        <button id="num--17">17</button>
+        <button id="num--18">18</button>
+        <button id="num--19">19</button>
+        <button id="num--20">20</button>
+      </section>
+      <h1 class="title">The closest number</h1>
+    </main>
   </body>
 </html>
