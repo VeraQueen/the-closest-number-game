@@ -52,6 +52,8 @@ Outline: -
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
 
+/****** GENERAL ******/
+
 * {
   margin: 0;
   padding: 0;
@@ -67,17 +69,17 @@ Outline: -
 
 html {
   font-size: 62.5%;
-  overflow: hidden;
 }
 
 body,
 button {
-  font-family: "Irish Grover", sans-serif;
+  font-family: 'Irish Grover', sans-serif;
   line-height: 1;
 }
 
 .game {
   height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,7 +92,77 @@ button {
     #0d2336,
     #160b0a
   );
+  position: relative;
 }
+
+/****** GAME INSTRUCTIONS ******/
+
+@keyframes modal-opacity {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.game-instructions {
+  margin: 0 auto;
+  width: 70rem;
+  height: min-content;
+  text-align: center;
+  background-color: #0a1a27;
+  font-size: 2.4rem;
+  color: #d6d1cd;
+  z-index: 2;
+  line-height: 1.5;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 30px 5px #d3bccc;
+}
+
+.game-instructions h1 {
+  margin: 2.4rem auto;
+}
+
+#hello {
+  margin-bottom: 1.2rem;
+}
+
+#steps {
+  list-style: none;
+}
+
+#steps li {
+  margin-bottom: 0.8rem;
+}
+
+.btn--start {
+  margin: 4rem auto 3rem auto;
+  background-color: #0e273c !important;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(10, 26, 39, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: 1;
+}
+
+.hidden {
+  animation: modal-opacity 600ms ease-in-out 350ms forwards;
+}
+
+/***** GAME AREA *****/
 
 .game-area {
   border-radius: 50px;
@@ -108,18 +180,6 @@ button {
   border-radius: 50px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-}
-
-.round-point {
-  font-size: 6.2rem;
-  color: #a167a5;
-  margin: 3rem auto;
-}
-
-.player--active--0,
-.player--active--1 {
-  color: #ea630f;
-  font-size: 5.2rem;
 }
 
 .your-number {
@@ -151,7 +211,7 @@ button {
 .generated-number {
   width: 30rem;
   height: 20rem;
-  font-size: 9.6rem;
+  font-size: 8.6rem;
 }
 
 .player-computer,
@@ -173,22 +233,6 @@ button {
   font-size: 3rem;
 }
 
-.btn {
-  color: #d6d1cd;
-  border-radius: 50px;
-  width: 20rem;
-  height: 5rem;
-  border: none;
-  font-size: 3rem;
-  cursor: pointer;
-  display: block;
-}
-
-.btn,
-.btn-numbers button {
-  background-color: #0a1a27;
-}
-
 .player-computer {
   padding-bottom: 4rem;
 }
@@ -197,8 +241,53 @@ button {
   position: relative;
 }
 
+#loser--0,
+#loser--1 {
+  font-family: 'Rubik Wet Paint', cursive;
+  color: #d50606;
+  font-size: 13rem;
+  position: absolute;
+  z-index: 2;
+}
+#loser--0 {
+  top: 20%;
+  left: -30%;
+  transform: rotate(25deg);
+  display: none;
+}
+
+#loser--1 {
+  top: 20%;
+  right: -40%;
+  transform: rotate(-25deg);
+  display: none;
+}
+
+#winner--0,
+#winner--1 {
+  font-family: 'Rubik Dirt', sans-serif;
+  color: #15aabf;
+  font-size: 15rem;
+  position: absolute;
+  z-index: 2;
+}
+
+#winner--0 {
+  top: 20%;
+  left: -45%;
+  transform: rotate(25deg);
+  display: none;
+}
+
+#winner--1 {
+  top: 20%;
+  right: -50%;
+  transform: rotate(-25deg);
+  display: none;
+}
+
 .player--0::before {
-  content: "A";
+  content: 'A';
   position: absolute;
   font-size: 35rem;
   height: fit-content;
@@ -211,7 +300,7 @@ button {
 }
 
 .player--1::before {
-  content: "B";
+  content: 'B';
   position: absolute;
   font-size: 35rem;
   height: fit-content;
@@ -223,7 +312,42 @@ button {
   transform: translate(65%);
 }
 
-.btn-numbers button {
+/***** REMOVABLE CLASSES ACCORDING TO THE WINNING/LOSING PLAYER *****/
+
+.round-point {
+  font-size: 6.2rem;
+  color: #c0eb75;
+  padding: 3rem 0;
+}
+
+.active {
+  color: #82c91e;
+  font-size: 6.2rem;
+}
+
+/***** BUTTONS *****/
+
+.btn {
+  color: #d6d1cd;
+  border-radius: 50px;
+  width: 20rem;
+  height: 5rem;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+  display: block;
+  letter-spacing: 0.1rem;
+}
+
+.btn,
+.num {
+  background-color: #0a1a27;
+  transition-duration: 300ms;
+  transition-property: background-color;
+  transition-timing-function: ease-in-out;
+}
+
+.num {
   color: #d6d1cd;
   border-radius: 50px;
   width: 6rem;
@@ -234,15 +358,7 @@ button {
 }
 
 .btn:hover,
-.btn-numbers button:hover {
+.num:hover {
   background-image: none;
-  background-color: #511d56;
-}
-.btn:active,
-.btn-numbers button:active {
-  background-color: #36133a;
-}
-
-.winner {
-  color: #5c7cfa;
+  background-color: #511d56 !important;
 }
