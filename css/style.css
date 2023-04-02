@@ -127,6 +127,7 @@ button {
 }
 
 .game-instructions h1 {
+  font-size: 4.4rem;
   margin: 2.4rem auto;
 }
 
@@ -171,6 +172,7 @@ button {
   display: flex;
   justify-content: center;
   text-align: center;
+  gap: 4rem;
 }
 
 .title {
@@ -186,12 +188,13 @@ button {
   color: #d6d1cd;
   opacity: 80%;
   font-size: 3.6rem;
-  margin: 0 8rem 0 8rem;
+  margin: 0 auto;
 }
 
 .your-number::first-letter {
   text-transform: uppercase;
 }
+
 .player-guess,
 .generated-number {
   background-color: #d3bccc;
@@ -215,7 +218,8 @@ button {
 }
 
 .player-computer,
-.player-area {
+.player-area,
+.btns-game {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -228,17 +232,57 @@ button {
   padding-bottom: 3rem;
 }
 
+.player-computer {
+  padding-bottom: 4rem;
+}
+
 .current-score {
   color: #a167a5;
   font-size: 3rem;
 }
 
-.player-computer {
-  padding-bottom: 4rem;
+.player {
+  width: 30rem;
+  position: relative;
 }
 
-.player {
-  position: relative;
+.player--0::before {
+  content: 'A';
+  position: absolute;
+  font-size: 35rem;
+  height: fit-content;
+  width: fit-content;
+  color: #d6d1cd;
+  opacity: 20%;
+  left: -15%;
+  top: 15%;
+  transform: translate(-65%);
+}
+
+.player--1::before {
+  content: 'B';
+  position: absolute;
+  font-size: 35rem;
+  height: fit-content;
+  width: fit-content;
+  color: #d6d1cd;
+  opacity: 20%;
+  right: -15%;
+  top: 15%;
+  transform: translate(65%);
+}
+
+/***** REMOVABLE ACCORDING TO THE WINNING/LOSING/ACTIVE PLAYER *****/
+
+.round-point {
+  font-size: 6.2rem;
+  color: #c0eb75;
+  padding: 3rem 0;
+}
+
+.active {
+  color: #82c91e;
+  font-size: 6.2rem;
 }
 
 #loser--0,
@@ -281,48 +325,9 @@ button {
 
 #winner--1 {
   top: 20%;
-  right: -50%;
+  right: -80%;
   transform: rotate(-25deg);
   display: none;
-}
-
-.player--0::before {
-  content: 'A';
-  position: absolute;
-  font-size: 35rem;
-  height: fit-content;
-  width: fit-content;
-  color: #d6d1cd;
-  opacity: 20%;
-  left: 0;
-  top: 15%;
-  transform: translate(-65%);
-}
-
-.player--1::before {
-  content: 'B';
-  position: absolute;
-  font-size: 35rem;
-  height: fit-content;
-  width: fit-content;
-  color: #d6d1cd;
-  opacity: 20%;
-  right: 0;
-  top: 15%;
-  transform: translate(65%);
-}
-
-/***** REMOVABLE CLASSES ACCORDING TO THE WINNING/LOSING PLAYER *****/
-
-.round-point {
-  font-size: 6.2rem;
-  color: #c0eb75;
-  padding: 3rem 0;
-}
-
-.active {
-  color: #82c91e;
-  font-size: 6.2rem;
 }
 
 /***** BUTTONS *****/
@@ -345,6 +350,11 @@ button {
   transition-duration: 300ms;
   transition-property: background-color;
   transition-timing-function: ease-in-out;
+}
+
+.btn-numbers {
+  max-width: 95vw;
+  padding: 3rem 0 3rem 0;
 }
 
 .num {

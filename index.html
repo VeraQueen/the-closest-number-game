@@ -30,7 +30,8 @@
       href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap"
       rel="stylesheet"
     />
-    <link href="style.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/queries.css" rel="stylesheet" />
   </head>
   <body>
     <div class="game-instructions">
@@ -64,9 +65,11 @@
         </section>
         <section class="player-computer">
           <p class="generated-number">?</p>
-          <button class="btn btn--reset">reset</button>
-          <button class="btn btn--new-round">new round</button>
-          <button class="btn btn--check">check</button>
+          <div class="btns-game">
+            <button class="btn btn--reset">reset</button>
+            <button class="btn btn--new-round">new round</button>
+            <button class="btn btn--check">check</button>
+          </div>
         </section>
         <section class="player player--1">
           <p id="loser--1">LOSER</p>

@@ -1,0 +1,346 @@
+/***** below 1344px (smaller desktops) *****/
+
+@media (max-width: 84em) {
+  .player--0::before {
+    font-size: 25rem;
+    left: -5%;
+    top: 30%;
+  }
+  .player--1::before {
+    font-size: 25rem;
+    right: -5%;
+    top: 30%;
+  }
+
+  .btn-numbers {
+    max-width: 85vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-numbers .num {
+    flex-shrink: 0;
+  }
+}
+
+/***** below 1200px (landscape tablets) *****/
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .player--0::before {
+    left: 0%;
+  }
+
+  .player--1::before {
+    right: 0%;
+  }
+
+  .title {
+    font-size: 8.6rem;
+  }
+
+  .game-area {
+    gap: 3rem;
+  }
+}
+
+/***** below 944px (tablets) *****/
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+
+  .game-area {
+    gap: 2rem;
+  }
+
+  .player--0::before {
+    top: 5%;
+    left: 55%;
+    opacity: 10%;
+  }
+
+  .player--1::before {
+    top: 5%;
+    right: 55%;
+    opacity: 10%;
+  }
+
+  .round-point,
+  .active {
+    font-size: 4.4rem;
+  }
+
+  .title {
+    font-size: 7.4rem;
+  }
+
+  .your-number {
+    font-size: 3rem;
+  }
+
+  .player-computer {
+    padding-bottom: 5rem;
+  }
+
+  #winner--0,
+  #winner--1 {
+    font-size: 8rem;
+    top: 10%;
+  }
+
+  #winner--0 {
+    left: 0%;
+    transform: rotate(30deg);
+  }
+
+  #winner--1 {
+    right: 0%;
+    transform: rotate(-30deg);
+  }
+
+  #loser--0,
+  #loser--1 {
+    font-size: 7rem;
+    top: 10%;
+  }
+
+  #loser--0 {
+    left: 10%;
+    transform: rotate(30deg);
+  }
+
+  #loser--1 {
+    right: 15%;
+    transform: rotate(-30deg);
+  }
+}
+
+/***** below 704px (smaller tablets) *****/
+@media (max-width: 44em) {
+  .game-instructions {
+    width: 50rem;
+  }
+
+  .game-instructions * {
+    padding: 0 1rem;
+  }
+
+  .title {
+    font-size: 6.2rem;
+    order: -1;
+  }
+
+  .num {
+    width: 5rem;
+    height: 5rem;
+    font-size: 2.4rem;
+  }
+
+  .game-area {
+    flex-direction: column;
+  }
+
+  .player-computer {
+    order: -1;
+  }
+
+  .player-computer,
+  .player-area {
+    flex-direction: row;
+  }
+
+  .player {
+    width: 60rem;
+  }
+
+  .player-computer {
+    padding-bottom: 0;
+  }
+
+  .player-area {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+  }
+
+  .round-point {
+    padding: 0;
+    text-align: start;
+  }
+
+  .your-number {
+    align-self: flex-end;
+    font-size: 3.6rem;
+  }
+
+  .current-score {
+    font-size: 3.6rem;
+    flex-shrink: 1;
+    align-self: end;
+  }
+
+  .player--0::before {
+    left: 20%;
+    top: -10%;
+  }
+  .player--1::before {
+    left: -15%;
+    top: -10%;
+  }
+
+  @keyframes opacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  #winner--0,
+  #winner--1 {
+    font-size: 11rem;
+    top: 10%;
+  }
+
+  #winner--0 {
+    left: 10%;
+    transform: rotate(10deg);
+  }
+
+  #winner--1 {
+    right: 10%;
+    transform: rotate(-15deg);
+  }
+
+  #loser--0,
+  #loser--1 {
+    font-size: 10rem;
+    top: 10%;
+  }
+
+  #loser--0 {
+    left: 20%;
+    transform: rotate(10deg);
+  }
+
+  #loser--1 {
+    right: 20%;
+    transform: rotate(-15deg);
+  }
+}
+
+/***** below 544px (phones) *****/
+@media (max-width: 34em) {
+  .game-instructions {
+    width: 30rem;
+    font-size: 1.2rem;
+  }
+
+  .game-instructions h1 {
+    font-size: 2.4rem;
+  }
+
+  .title {
+    font-size: 3.6rem;
+    text-align: center;
+    padding: 3rem 0;
+  }
+
+  .player {
+    width: 32rem;
+    align-self: center;
+  }
+
+  .player-guess {
+    width: 15rem;
+    height: 9rem;
+    font-size: 4.4rem;
+  }
+
+  .generated-number {
+    width: 18rem;
+    height: 13rem;
+    font-size: 5.2rem;
+  }
+
+  .player--0::before {
+    font-size: 12rem;
+    top: 10%;
+    left: 20%;
+  }
+  .player--1::before {
+    font-size: 12rem;
+    top: 10%;
+    left: -10%;
+  }
+
+  .your-number,
+  .current-score {
+    font-size: 2rem;
+  }
+
+  .your-number {
+    margin: 0;
+  }
+
+  .btn {
+    width: 15rem;
+    height: 4rem;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .num {
+    font-size: 2rem;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .player-computer,
+  .player-area,
+  .btns-game {
+    gap: 1rem;
+  }
+
+  .round-point {
+    font-size: 2.4rem;
+  }
+
+  .game-area {
+    gap: 1rem;
+  }
+
+  #winner--0,
+  #winner--1 {
+    font-size: 8rem;
+    top: 10%;
+  }
+
+  #winner--0 {
+    left: 0%;
+  }
+
+  #winner--1 {
+    right: 0%;
+  }
+
+  #loser--0,
+  #loser--1 {
+    font-size: 7rem;
+    top: 10%;
+  }
+
+  #loser--0 {
+    left: 15%;
+  }
+
+  #loser--1 {
+    right: 10%;
+  }
+}
