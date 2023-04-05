@@ -132,7 +132,7 @@ btnCheck.addEventListener('click', function () {
     generatedNumber.textContent = number;
     // chose the same numbers
   }
-  // check for winner (one of the players has accumulated 5 points)s
+  // check for winner (one of the players has accumulated 5 points)
   if (scores[0] === 5) {
     winner0El.style.display = 'block';
     player0El.style.opacity = 0;

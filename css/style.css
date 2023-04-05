@@ -34,7 +34,7 @@ TINT: #0e273c, #d3bccc
 
 SHADES:#36133a, #511d56
 
-ACCENTS: #a167a5, #ea630f, #5c7cfa
+ACCENTS: #c0eb75, #82c91e, #d50606
 
 GREY COLORS: -
 
@@ -166,9 +166,6 @@ button {
 /***** GAME AREA *****/
 
 .game-area {
-  border-radius: 50px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -179,9 +176,6 @@ button {
   font-size: 9.8rem;
   color: #d6d1cd;
   padding: 5rem 0;
-  border-radius: 50px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
 }
 
 .your-number {
@@ -371,4 +365,10 @@ button {
 .num:hover {
   background-image: none;
   background-color: #511d56 !important;
+}
+
+.btn:active,
+.num:active {
+  background-image: none;
+  background-color: #36133a !important;
 }
