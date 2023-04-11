@@ -70,11 +70,13 @@ const checkPlaying = function () {
   if (guess0El.textContent === '' || guess1El.textContent === '') {
     playing = true;
     btnCheck.setAttribute('disabled', 'disabled');
+    btnCheck.classList.remove('btn--active');
   } else {
     playing = false;
     player0El.style.opacity = 0;
     btnCheck.style.boxShadow = '0 0 30px 5px #6f73a4';
     btnCheck.removeAttribute('disabled');
+    btnCheck.classList.add('btn--active');
   }
 };
 checkPlaying();
@@ -82,6 +84,9 @@ checkPlaying();
 const btnsDisable = function () {
   btnCheck.setAttribute('disabled', 'disabled');
   btnNewRound.setAttribute('disabled', 'disabled');
+  // hover and active state disabled
+  btnCheck.classList.remove('btn--active');
+  btnNewRound.classList.remove('btn--active');
 };
 
 for (let i = 0; i < btnsNumbers.length; i++) {
@@ -133,13 +138,13 @@ btnCheck.addEventListener('click', function () {
     // chose the same numbers
   }
   // check for winner (one of the players has accumulated 5 points)
-  if (scores[0] === 5) {
+  if (scores[0] === 2) {
     winner0El.style.display = 'block';
     player0El.style.opacity = 0;
     loser1El.style.display = 'block';
     btnNewRound.style.boxShadow = 'none';
     btnsDisable();
-  } else if (scores[1] === 5) {
+  } else if (scores[1] === 2) {
     winner1El.style.display = 'block';
     player1El.style.opacity = 0;
     loser0El.style.display = 'block';
