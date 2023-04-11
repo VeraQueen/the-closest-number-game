@@ -71,12 +71,20 @@ const checkPlaying = function () {
     playing = true;
     btnCheck.setAttribute('disabled', 'disabled');
     btnCheck.classList.remove('btn--active');
+    for (let num of btnsNumbers) {
+      num.classList.add('btn--active');
+      num.removeAttribute('disabled');
+    }
   } else {
     playing = false;
     player0El.style.opacity = 0;
     btnCheck.style.boxShadow = '0 0 30px 5px #6f73a4';
     btnCheck.removeAttribute('disabled');
     btnCheck.classList.add('btn--active');
+    btnsNumbers.forEach(num => {
+      num.classList.remove('btn--active');
+      num.setAttribute('disabled', 'disabled');
+    });
   }
 };
 checkPlaying();
@@ -97,7 +105,6 @@ for (let i = 0; i < btnsNumbers.length; i++) {
           btnsNumbers[i].textContent)
       );
       values[activePlayer] = value;
-      console.log(values);
       switchPlayer();
       checkPlaying();
     }
@@ -107,6 +114,7 @@ for (let i = 0; i < btnsNumbers.length; i++) {
 btnCheck.addEventListener('click', function () {
   // disable button 'check'
   btnCheck.setAttribute('disabled', 'disabled');
+  btnCheck.classList.remove('btn--active');
   // reveal generated number
   generatedNumber.textContent = number;
   // remove box shadow, move it to button 'new round'
@@ -135,9 +143,8 @@ btnCheck.addEventListener('click', function () {
     // same difference
   } else if (Math.abs(values[0] - number) === Math.abs(values[1] - number)) {
     generatedNumber.textContent = number;
-    // chose the same numbers
   }
-  // check for winner (one of the players has accumulated 5 points)
+  // check for winner (one of the players has accumulated 2 points)
   if (scores[0] === 2) {
     winner0El.style.display = 'block';
     player0El.style.opacity = 0;
